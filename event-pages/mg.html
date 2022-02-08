@@ -241,25 +241,7 @@
     </ul>
     <!-- ==== Nav Dropdown End ==== -->
 
-    <!-- === Modal === -->
-
-    <div id="modal">
-      <div class="modal-container">
-        <div class="modal-head">
-          <img src="./assets/ibcIcon.png" alt="ibc" />
-        </div>
-        <div class="modal-body">
-          <h1>Successfully Subscribed!</h1>
-          <p>
-            Thank you for subscribing to our newsletter. We will keep you
-            updated with our latest news and updates.
-          </p>
-          <button id="close-modal">Close</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- === Modal End === -->
+    
 
     <div id="smooth-scroll">
       <!-- ==== Main Section ==== -->
@@ -411,7 +393,7 @@
               <h1 class="heading">GET LATEST UPDATES</h1>
             </span>
             <div id="cform" class="contact">
-              <form action="POST" data-netlify="true">
+              <form name="subscription" method="POST" action="../success.html" data-netlify="true">
                 <input name="E-mail" type="email" placeholder="Your E-mail" />
                 <button type="submit" class="button">SUBSCRIBE</button>
               </form>
@@ -493,7 +475,7 @@
     <!-- === Script File === -->
     <script src="../js/event-page.js" type="module"></script>
 
-    <script src="../js/smooth-scroll.js"></script>
+    
     <!-- ==== JS End ==== -->
   </body>
 </html>
