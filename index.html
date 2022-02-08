@@ -27,7 +27,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
+ 
     <!-- jQuery -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
@@ -35,6 +35,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
   </head>
   <body>
     <!-- ==== Loader Animation ==== -->
@@ -249,25 +250,7 @@
     </ul>
     <!-- ==== Nav Dropdown End ==== -->
 
-    <!-- === Modal === -->
-
-    <div id="modal">
-      <div class="modal-container">
-        <div class="modal-head">
-          <img src="./assets/ibcIcon.png" alt="ibc" />
-        </div>
-        <div class="modal-body">
-          <h1>Successfully Subscribed!</h1>
-          <p>
-            Thank you for subscribing to our newsletter. We will keep you
-            updated with our latest news and updates.
-          </p>
-          <button id="close-modal">Close</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- === Modal End === -->
+    
     <div id="smooth-scroll">
       <!-- ==== Main Start ==== -->
       <main id="main">
@@ -674,7 +657,7 @@
               <h1 class="heading">GET LATEST UPDATES</h1>
             </span>
             <div id="cform" class="contact">
-              <form action="POST" data-netlify="true">
+              <form name="subscription" method="POST" action="./success.html" data-netlify="true">
                 <input name="E-mail" type="email" placeholder="Your E-mail" />
                 <button type="submit" class="button">SUBSCRIBE</button>
               </form>
@@ -752,16 +735,10 @@
     <!-- AOS -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
-      integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     ></script>
     <!-- GSAP -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
-      integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     ></script>
     <!-- Script File -->
     <script src="/js/index-page.js" type="module"></script>
