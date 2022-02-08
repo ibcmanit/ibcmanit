@@ -1,0 +1,111 @@
+// Base Page
+@import "./components/base";
+
+// Secondary Navbar
+@import "./components/secondarynav";
+
+// Main Navbar
+@import "./components/mainnav";
+
+// Home Page CSS
+
+// Loader
+@import "./components/loader";
+
+
+// Index Page
+@import "./components/index/indexHome";
+
+// Current Event
+@import "./components/index/currentEvent";
+
+// About Page
+@import "./components/index/about";
+
+// Events Page
+@import "./components/index/event";
+
+// Gallery Page
+@import "./components/index/gallery";
+
+// Blog Page
+@import "./components/index/blog";
+
+// Sponsor Page
+@import "./components/index/sponsor";
+
+// Footer
+@import "./components/footer";
+
+// Particles
+@import "./components/particle";
+
+// Modal
+@import "./components/modal";
+
+
+// Page Transition
+.transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  z-index: 100;
+  list-style-type: none;
+  margin: 0;
+  pointer-events: none;
+
+  li {
+    position: relative;
+    width: 20%;
+    transform: scaleY(0);
+  }
+
+  li:nth-child(odd) {
+    background-color: var(--main-color);
+  }
+  li:nth-child(even) {
+    background-color: var(--secondary-color);
+  }
+}
+
+
+// Gallery Page CSS
+
+// Gallery Home
+
+@import "./components/gallery/galleryHome";
+
+// Gallery Page
+@import "./components/gallery/gallery";
+
+
+// Team Page CSS
+
+// Team Home
+@import "./components/team/team-home";
+
+// Photo
+@import "./components/team/photo";
+
+// Quote
+@import "./components/team/quote";
+
+// Team
+@import "./components/team/team";
+
+// Event Page CSS
+
+// Event home
+@import "./components/event/event-home";
+
+// Numbers
+@import "./components/event/numbers";
+
+// Event Gallery
+@import "./components/event/event-gallery";
+
+// Coming Soon
+@import "./components/event/comingsoon";

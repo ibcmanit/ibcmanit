@@ -1,0 +1,49 @@
+@use "../base";
+
+#sponsors {
+  position: relative;
+  width: 100%;
+  padding: 5% var(--side-margin);
+
+  h1 {
+    position: relative;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50%;
+      height: 100%;
+      border-bottom: 3px solid var(--secondary-color);
+    }
+  }
+
+  .sponsor-container {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 5rem;
+
+    .sponsor {
+      width: 100%;
+      aspect-ratio: 1;
+      margin: auto 0;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    @media screen and (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

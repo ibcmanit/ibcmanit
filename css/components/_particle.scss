@@ -1,0 +1,92 @@
+@use "./base";
+
+#particles {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .particle {
+        position: absolute;
+        --size: 8rem;
+        width: var(--size);
+        height: var(--size);
+        background-color: rgba(255, 191, 87, 0.4);
+        backdrop-filter: blur(10px) saturate(200%);
+        -webkit-backdrop-filter: blur(10px) saturate(200%);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        animation: rotate 10s linear infinite;
+
+        &:nth-child(1) {
+            top: 15%;
+            left: 5%;
+            transform: scale(0.5);
+        }
+
+        &:nth-child(2) {
+            top: 25%;
+            left: 60%;
+            transform: rotateZ(20deg);
+        }
+
+        &:nth-child(3) {
+            top: 12%;
+            left: 65%;
+            transform: rotateZ(60deg);
+        }
+
+        &:nth-child(4) {
+            top: 35%;
+            left: 12%;
+            transform: rotateZ(50deg);
+        }
+
+        &:nth-child(5) {
+            top: 43%;
+            left: 80%;
+            transform: rotateZ(60deg);
+        }
+        &:nth-child(6) {
+            top: 48%;
+            left: 10%;
+            transform: rotateZ(60deg);
+        }
+        &:nth-child(7) {
+            top: 58%;
+            left: 70%;
+            transform: rotateZ(60deg);
+        }
+        &:nth-child(8) {
+            top: 78%;
+            left: 5%;
+            transform: rotateZ(60deg);
+        }
+        &:nth-child(9) {
+            top: 63%;
+            left: 5%;
+            transform: rotateZ(60deg);
+        }
+        &:nth-child(10) {
+            top: 70%;
+            left: 90%;
+            transform: rotateZ(60deg);
+        }
+        &:nth-child(11) {
+            top: 88%;
+            left: 40%;
+            transform: rotateZ(30deg);
+        }
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}

@@ -1,0 +1,110 @@
+@use "../base";
+
+#blog {
+  position: relative;
+  width: 100%;
+  padding: 5% var(--side-margin);
+
+  h1 {
+    position: relative;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50%;
+      height: 100%;
+      border-bottom: 3px solid var(--secondary-color);
+    }
+  }
+
+  .blog-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    margin-top: 5rem;
+
+    .blog-post {
+      display: flex;
+      flex-direction: column;
+      border-radius: 5px;
+      
+
+      .blog-img {
+        width: 100%;
+        aspect-ratio: 1;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        border-radius: 10px;
+      }
+
+      .blog-content {
+        padding: 1rem;
+        h3 {
+          font-size: 30px;
+          color: var(--main-color);
+          
+        }
+
+        .blog-desc {
+          font-size: 18px;
+          font-weight: 400;
+          color: rgba(0, 0, 0, 0.4);
+          word-wrap: break-word;
+          font-family: $sub-heading;
+          font-weight: 400;
+          font-size: var(--sub-heading-size);
+
+          .blog-footer {
+            margin-top: 1rem;
+            display: flex;
+            gap: 0.5rem;
+            justify-content: space-between;
+
+            h3 {
+              width: fit-content;
+              font-size: 16px;
+              color: var(--black);
+            }
+
+            .line{
+              flex: 1;
+              // width: auto;
+              height: 2px;
+              margin: auto 0;
+              border-bottom: 2px solid var(--para-text);
+            }
+            .blog-ref {
+              width: fit-content;
+              text-decoration: none;
+              text-align: center;
+              font-family: $sub-heading;
+              color: var(--secondary-color);
+              font-weight: 400;
+              font-size: 18px;
+            }
+          }
+          
+        }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .blog-link {
+    text-decoration: none;
+    @include button-style(var(--main-color), var(--white));
+    background-color: var(--main-color);
+    box-shadow: 0px 10px 30px 0px rgba(252, 163, 17, 0.5);
+    margin: 5rem auto 0 auto;
+  }
+}

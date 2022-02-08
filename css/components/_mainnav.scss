@@ -1,0 +1,168 @@
+@use "./base";
+
+#main-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5em;
+  // transform: translateY(-100%);
+  // opacity: 0;
+  background-color: var(--white);
+  z-index: 999;
+  padding: 0 calc(var(--side-margin) / 2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  overflow-x: hidden;
+
+  .logo {
+    position: relative;
+
+    a {
+      position: relative;
+
+      #nav-logo {
+        position: relative;
+        width: 4rem;
+        
+        stroke: var(--secondary-color);
+
+
+        & path:nth-child(1) {
+          stroke-dasharray: 1695;
+          stroke-dashoffset: 1695;
+        }
+        & path:nth-child(2) {
+          stroke-dasharray: 142;
+          stroke-dashoffset: 142;
+        }
+
+        & path:nth-child(3) {
+          stroke-dasharray: 2240;
+          stroke-dashoffset: 2240;
+        }
+
+        & path:nth-child(4) {
+          stroke-dasharray: 2354;
+          stroke-dashoffset: 2354;
+        }
+
+        & path:nth-child(5) {
+          stroke-dasharray: 462;
+          stroke-dashoffset: 462;
+        }
+
+        & path:nth-child(6) {
+          stroke-dasharray: 469;
+          stroke-dashoffset: 469;
+        }
+
+        & path:nth-child(7) {
+          stroke-dasharray: 393;
+          stroke-dashoffset: 393;
+        }
+
+        & path:nth-child(8) {
+          stroke-dasharray: 715;
+          stroke-dashoffset: 715;
+        }
+      }
+      
+    }
+  }
+
+  .nav-links {
+    position: relative;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    li {
+      position: relative;
+      a {
+        text-decoration: none;
+        color: var(--main-color);
+        font-size: 1.2rem;
+        font-family: $sub-heading;
+        font-weight: 700;
+        transition: opacity 0.2s ease;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+      .blog-btn {
+        @include button-style(var(--main-color), var(var(--white)));
+        color: var(--white);
+        background-color: var(--secondary-color);
+        width: 120px;
+        height: 40px;
+        border: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    padding: 0 calc(var(--side-margin) * 1.5);
+    .nav-links {
+      display: none;
+      visibility: hidden;
+    }
+  }
+}
+
+
+.dropdown {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 6rem;
+  z-index: 1000;
+  background: var(--main-color);
+  list-style-type: none;
+  display: block;
+  min-width: 250px;
+  text-align: left;
+  padding: 1rem;
+  padding-bottom: 0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
+  transition: clip-path 0.2s ease;
+  border-radius: 5px;
+
+  li {
+    clear: both;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+    border-style: none;
+
+    a {
+      text-decoration: none;
+      font-family: $sub-heading;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--white);
+      transition: all 0.2s ease;
+    }
+  }
+
+  li a:hover {
+    padding-left: 10px;
+    border-left: 5px solid var(--secondary-color);
+  }
+}
+
+.show {
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+}
+
+#team-dropdown {
+  cursor: pointer;
+}

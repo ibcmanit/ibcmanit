@@ -1,0 +1,106 @@
+@use "../base";
+
+#coming-soon {
+  position: relative;
+  width: 100%;
+  padding: var(--top-margin) var(--side-margin);
+  overflow: hidden;
+
+  .heading {
+    text-align: center;
+    position: relative;
+    width: fit-content;
+    color: var(--black);
+    margin: 0 auto;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 50%;
+      transform: translateX(-50%);
+      height: 100%;
+      border-bottom: 3px solid var(--secondary-color);
+      margin-top: 2rem;
+    }
+  }
+
+  .cs-content {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    margin-top: 5rem;
+    overflow: hidden;
+
+    @media (max-width: 992px) {
+      flex-direction: column;
+      gap: 5rem;
+      text-align: center;
+
+      .cs-left {
+        h1 {
+          margin: 0 auto;
+        }
+
+        .button {
+          margin: 5rem auto 0 auto !important;
+        }
+      }
+
+      .cs-right img {
+        width: 100% !important;
+      }
+    }
+
+    .cs-left {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+
+      h3 {
+        color: var(--secondary-color);
+      }
+      h1 {
+        color: var(--main-color);
+        font-size: calc(var(--heading-size) * 0.8);
+        text-align: left;
+
+        @media (max-width: 768px) {
+          font-size: calc(var(--heading-size) * 0.5) !important;
+        }
+      }
+      p {
+        color: var(--black);
+        font-family: $sub-heading;
+        font-size: var(--sub-heading-size);
+        font-weight: 400;
+        margin-top: 2rem;
+      }
+
+      .button {
+        text-decoration: none;
+        @include button-style(var(--main-color), var(--white));
+        background-color: var(--main-color);
+        box-shadow: 0px 10px 30px 0px rgba(237, 187, 95, 0.5);
+        margin: 5rem auto 0 0;
+      }
+    }
+
+    .cs-right {
+      flex: 1;
+
+      img {
+        width: 80%;
+        aspect-ratio: 3/4;
+        float: right;
+        object-fit: cover;
+        object-position: center;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+          rgba(17, 17, 26, 0.1) 0px 8px 24px,
+          rgba(17, 17, 26, 0.1) 0px 16px 56px;
+        border-radius: 5px;
+      }
+    }
+  }
+}

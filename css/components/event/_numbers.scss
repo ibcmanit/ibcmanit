@@ -1,0 +1,56 @@
+@use "../base";
+
+#numbers {
+  position: relative;
+  width: 100%;
+  padding: 0 var(--side-margin);
+  margin-top: var(--top-margin);
+
+  .heading {
+    text-align: center;
+    position: relative;
+    width: fit-content;
+    color: var(--black);
+    margin: 0 auto;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 50%;
+      transform: translateX(-50%);
+      height: 100%;
+      border-bottom: 3px solid var(--secondary-color);
+      margin-top: 2rem;
+    }
+  }
+
+  .items {
+    position: relative;
+    width: 100%;
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .item {
+      position: relative;
+
+      h1 {
+        text-align: center;
+        color: var(--main-color);
+        font-size: calc(var(--heading-size) * 2);
+      }
+
+      h3 {
+        text-align: center;
+        color: var(--secondary-color);
+      }
+    }
+  }
+}
