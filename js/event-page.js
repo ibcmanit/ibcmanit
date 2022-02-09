@@ -59,7 +59,6 @@ sections.forEach(section => {
 // Dropdown
 const teamDropdown = document.querySelector("#team-dropdown");
 var rect = teamDropdown.getBoundingClientRect();
-console.log(rect);
 const dropdown = document.querySelector(".dropdown");
 
 dropdown.style.left = `${rect.left}px`;
