@@ -95,3 +95,36 @@ backToggle.addEventListener("click", () => {
   tNav.classList.toggle("tnav-toggle");
   mNav.classList.toggle("mnav-toggle");
 })
+
+// Contact form validation
+const email = document.querySelector("#sub-email");
+const submit = document.querySelector("#sub-submit");
+
+
+const validateEmail = (email) => {
+  return String(email)
+    .toLowerCase()
+    .match(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+};
+
+email.addEventListener("focus", () => {
+  email.classList.remove("error");
+  submit.disabled = false;
+  submit.classList.remove("disabled");
+});
+
+email.addEventListener("focusout", () => {
+  if (!validateEmail(email.value)) {
+    email.classList.add("error");
+    submit.disabled = true;
+    submit.classList.add("disabled");
+  }
+});
+
+email.addEventListener("keydown", (e) => {
+  if (e.keyCode === 13) {
+    submit.click();
+  }
+});

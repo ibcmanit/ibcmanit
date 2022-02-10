@@ -1844,6 +1844,10 @@ p {
   }
 }
 
+#footer .footer-container .footer-left .contact .disabled {
+  background-color: #fdc04f;
+}
+
 #footer .footer-container .footer-left .contact .social {
   position: relative;
   display: -webkit-box;

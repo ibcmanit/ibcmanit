@@ -282,7 +282,7 @@
                 alt="team-image"
               />
               <div class="card-content">
-                <h1>ARCHIT RAGHUWANSHI</h1>
+                <h1>ARCHIT RAGHUVANSHI</h1>
                 <h3>IBC</h3>
                 <a
                   href="https://www.linkedin.com/in/archit-raghuvanshi-a2a113188"
@@ -474,9 +474,10 @@
               <h1 class="heading">GET LATEST UPDATES</h1>
             </span>
             <div id="cform" class="contact">
-              <form name="subscription" method="POST" action="./success.html" data-netlify="true">
-                <input name="E-mail" type="email" placeholder="Your E-mail" />
-                <button type="submit" class="button">SUBSCRIBE</button>
+              <form name="subscription" method="POST" action="./success.html" data-netlify="true" data-netlify-recaptcha="true">
+                <input id="sub-email" name="E-mail" type="email" placeholder="Your E-mail" />
+                <div data-netlify-recaptcha="true"></div>
+                <button id="sub-submit" type="submit" class="button">SUBSCRIBE</button>
               </form>
               <div class="social">
                 <a class="button" href="https://www.facebook.com/ibcManit16"
