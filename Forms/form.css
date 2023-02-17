@@ -47,6 +47,20 @@ h1 {
     margin-right    : auto;
 }
 
+#qr_img {
+    height     : 30%;
+    width      : 40%;
+    margin-left: 2rem;
+}
+
+@media(max-width: 600px) {
+    #qr_img {
+        width      : 100%;
+        height     : 100;
+        margin-left: 0rem;
+    }
+}
+
 
 
 @media(max-width: 1000px) {
