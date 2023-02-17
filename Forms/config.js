@@ -47,9 +47,11 @@ submitButton.addEventListener("click", (e) => {
     let branch = document.getElementById('branch').value;
     let yr = document.getElementById('year').value;
 
+    let File_other = document.getElementById('file_other').value;
+
     if (cname == 'MANIT') {
 
-        if (Em == '' || Fname == '' || Ctn == '' || File == '' || branch == '' || yr == '' || cname == '') {
+        if (Em == '' || Fname == '' || Ctn == '' || File == '' || branch == '' || yr == '') {
             alert("please fill all the necessary feilds!")
             frm.reset();
         }
@@ -80,12 +82,12 @@ submitButton.addEventListener("click", (e) => {
 
     else if (cname == 'other') {
 
-        if (Oth == '' || Em == '' || Fname == '' || Ctn == '' || File == '' || branch == '' || yr == '') {
+        if ( Em == '' || Fname == '' || Ctn == '' || File_other == '' || branch == '' || yr == '') {
             alert("please fill all the necessary feilds!")
-            frm.reset();
+            // frm.reset();
         }
 
-        else if (Em != '' && Fname != '' && Ctn != '' && File != '' && branch != '' && yr != '') {
+        else if (Em != '' && Fname != '' && Ctn != '' && File_other != '' && branch != '' && yr != '') {
 
             db_other.doc().set({
 
