@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="registration.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ==== Loader Animation ====
+    <section id="loader">
+        <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 948.54 607.51">
+            <defs>
+                <style>
+                    .cls-2 {
+                        fill: none;
+                        stroke-miterlimit: 10;
+                        stroke-width: 8px;
+                    }
+
+                    @media only screen and (max-width: 576px) {
+                        .cls-2 {
+                            stroke-width: 10px;
+                        }
+                    }
+                </style>
+            </defs>
+            <g id="Layer_2" data-name="Layer 2">
+                <path class="cls-2"
+                    d="M580.21,560c1.19.43,7.71,2.67,10,0,1.59-1.85.39-5.2-2-11-4.4-10.64-6.59-16-10-22a161.4,161.4,0,0,0-13-20c-3.72-4.84-7.15-8.56-14-16-9.78-10.61-10.45-10.5-16-17a123.54,123.54,0,0,1-14-19,80.27,80.27,0,0,1-8-17c-2.59-8.1-2.71-14.07-3-25-1-37.12-1.4-34.89-1-39a140.4,140.4,0,0,1,8-35c3.44-9.31,8.48-22.59,20-36,6-7,11.69-11.35,23-20,14-10.72,21-16.08,30-19,14.14-4.6,26.74-3,35-2,9.9,1.24,17,3.65,24,6,9.65,3.27,19.59,6.63,30,14,10.64,7.55,16.66,15.67,22,23a140.83,140.83,0,0,1,22,48,156.13,156.13,0,0,1,4,44,136.62,136.62,0,0,1-3,23,126.24,126.24,0,0,1-9,26c-8.78,18.52-20.21,30.75-29,40-9.45,10-11.31,9.89-20,20-7.81,9.09-13.06,15.3-17,25-3.71,9.12-4.17,16.17-5,29-1,15.19-2,30.62,5,34,2.6,1.26,6.34.87,8-1,2.63-3-1.21-8.42-2-20a40.27,40.27,0,0,1,0-8,38.53,38.53,0,0,1,4-13c7.38-15.41,5.89-16.16,10-23,5.63-9.39,8.85-8.65,22-22,9.84-10,16.18-18.66,23-28,8-11,12.37-16.93,17-26a148.18,148.18,0,0,0,13-39,161.55,161.55,0,0,0,2-43c-.76-8.93-2.67-29.53-13-52-4.12-9-26.5-55-78-73-9.55-3.33-29.71-10.11-55-6-25.56,4.16-42.82,17.25-57,28-10.88,8.26-24.65,18.7-36,37-15.13,24.41-16.67,47.8-18,68-1.48,22.43-3.42,51.91,12,82,13.31,26,38.72,50.77,40,52,5.37,5.19,13.2,12.16,22,24a156.12,156.12,0,0,1,17,29"
+                    transform="translate(-485.73 -236.25)" />
+                <path class="cls-2"
+                    d="M577.21,616c-8,2.65-14.36,4.74-15,8-1.05,5.3,13.17,12.3,20,15,5.07,2,11.95,4.65,21,4,10.4-.74,21.33-5.66,21-9-.09-.85-.9-1.57-11-5-15.09-5.11-14.65-4-18-6-6.29-3.82-8.49-8.25-14-8A15.77,15.77,0,0,0,577.21,616Z"
+                    transform="translate(-485.73 -236.25)" />
+                <path class="cls-2"
+                    d="M983.21,347a383.07,383.07,0,0,1,65-19c10-2,42.74-8,89-7,40.49.92,93.77,2.13,153,30,15,7.08,43,20.51,72,48,15.06,14.27,41.34,39.63,57,80,30.91,79.69-4.38,153.68-9,163-24.49,49.34-62.82,75.13-84,89-33.33,21.83-63.11,30.51-79,35-108.76,30.77-227.84-3-266-15V693a195.85,195.85,0,0,0,49,25c6.59,2.26,23.86,7.78,62,11,27.2,2.3,51.18,4.33,79,1,58.29-7,99.58-33,113-42,24.33-16.24,52.86-35.29,71-73,5-10.36,21.38-45.52,14-89-10.38-61.11-60.35-95.16-88-114-54.52-37.14-108.78-42.18-131-44-79.17-6.48-140.39,21.19-168,36Q982.71,375.53,983.21,347Z"
+                    transform="translate(-485.73 -236.25)" />
+                <path class="cls-2"
+                    d="M972.21,349V742a450.67,450.67,0,0,1-52-2c-43.31-4.17-65.45-5.44-90-18-13.52-6.91-38.73-19.8-53-49-18.91-38.68-4.41-76.94-2-83a105.7,105.7,0,0,1,21-33c-4-.17-9.45-.29-16,0a172.91,172.91,0,0,0-20,2c-6,1.05-35,6.13-48,30-1.85,3.39-7.66,14.35-6,28,.74,6.11,2.94,12.49,25,40,11.23,14,16.85,21,23,28,9.84,11.17,18.52,20.05,23,35a64.17,64.17,0,0,1,2,9,83.25,83.25,0,0,1,0,51,74.46,74.46,0,0,1-16,34c-17.54,20.76-41.31,24.6-50,26-8.85,1.43-40.13,5.13-67-15-19.45-14.56-26.87-34.33-32-48a132.08,132.08,0,0,1-8-36V664h27q.49,39.51,1,79a81.37,81.37,0,0,0,9,35c3.54,6.84,9.25,17.83,22,26,14.27,9.15,28.52,9.1,34,9s20.48-.56,35-11a59.8,59.8,0,0,0,22-31V733a139.15,139.15,0,0,0-9-18c-11.84-19.9-23.28-27.65-38-45a215.73,215.73,0,0,1-23-33,104.21,104.21,0,0,1,0-50,67.64,67.64,0,0,1,13-24c13.77-16.2,31.72-20.95,47-25a141,141,0,0,1,49-4,71.94,71.94,0,0,1-15-17,78.49,78.49,0,0,1-9-21c-3.14-11.36-10-36.16,0-64,10.56-29.43,33.48-44.21,44-51,11.12-7.17,24.18-13,57-20A574.55,574.55,0,0,1,972.21,349Z"
+                    transform="translate(-485.73 -236.25)" />
+                <path class="cls-2"
+                    d="M928.21,403q1,66,2,132h-87a40.37,40.37,0,0,1-22-8c-10.87-8.42-13.5-20.51-16-32-2.34-10.72-5.91-27.12,2-45,7-15.77,19-24,25-28,3.09-2,13.28-8.51,44-14A327.78,327.78,0,0,1,928.21,403Z"
+                    transform="translate(-485.73 -236.25)" />
+                <path class="cls-2"
+                    d="M929.21,556V692a222,222,0,0,1-31,1c-26.42-1-49.14-1.82-69-17-4.83-3.69-18.21-14.2-24-33s-.59-35,2-43a85.64,85.64,0,0,1,23-36l10-7Z"
+                    transform="translate(-485.73 -236.25)" />
+                <path class="cls-2" d="M627.21,612h-21V445a10.65,10.65,0,1,1,21-3Z"
+                    transform="translate(-485.73 -236.25)" />
+                <path class="cls-2"
+                    d="M632.21,443l22,18q-4-14.49-8-29l31,10-18-28,24-21-39,3,25-33-34,17-3-48q-8,23-16,46l-30-32,9,38-60-1,53,23-31,38,28-7v32l18-28"
+                    transform="translate(-485.73 -236.25)" />
+            </g>
+        </svg>
+
+        <!-- ==== Book ==== -->
+    <!-- <div class="loader">
+            <div class="loader book">
+                <figure class="page"></figure>
+                <figure class="page"></figure>
+                <figure class="page"></figure>
+            </div>
+
+            <h1>LOADING</h1>
+        </div>
+    </section> --> -->
+    <!-- ==== Loader Animation End ==== -->
+
+    <!-- ==== Secondary Nav ==== -->
+    <nav id="secondary-nav">
+        <input id="page-nav-toggle" class="main-navigation-toggle" type="checkbox" />
+        <label for="page-nav-toggle">
+            <svg class="icon--menu-toggle" viewBox="0 0 60 30">
+                <g class="icon-group">
+                    <g class="icon--menu">
+                        <path d="M 6 0 L 54 0" />
+                        <path d="M 6 15 L 54 15" />
+                        <path d="M 6 30 L 54 30" />
+                    </g>
+                    <g class="icon--close">
+                        <path d="M 15 0 L 45 30" />
+                        <path d="M 15 30 L 45 0" />
+                    </g>
+                </g>
+            </svg>
+        </label>
+        <nav class="main-navigation">
+            <ul id="m-nav">
+                <li><a href="index.html#about">ABOUT</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li id="toggle-nav"><a>TEAM</a></li>
+                <li><a class="scroll" href="#footer">CONTACT</a></li>
+                <li><a href="https://cognizanttrances.wordpress.com/">BLOG</a></li>
+            </ul>
+            <ul id="t-nav">
+                <li class="toggle-team">
+                    <a href="senior-team.html">SENIOR TEAM</a>
+                </li>
+                <li class="toggle-team"><a href="core-team.html">CORE TEAM</a></li>
+                <li id="back-toggle" class="toggle-team">
+                    <a><i class="fas fa-arrow-left"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </nav>
+    <!-- ==== Secondary Nav End ==== -->
+
+    <!-- ==== Main NavBar ==== -->
+    <nav id="main-navbar">
+        <div class="logo">
+            <a href="index.html">
+                <svg id="nav-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 948.54 607.51">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: none;
+                                stroke-miterlimit: 10;
+                                stroke-width: 15px;
+                            }
+
+                            @media only screen and (max-width: 576px) {
+                                .cls-1 {
+                                    stroke-width: 20px;
+                                }
+                            }
+                        </style>
+                    </defs>
+                    <g id="Layer_2" data-name="Layer 2">
+                        <path class="cls-1"
+                            d="M580.21,560c1.19.43,7.71,2.67,10,0,1.59-1.85.39-5.2-2-11-4.4-10.64-6.59-16-10-22a161.4,161.4,0,0,0-13-20c-3.72-4.84-7.15-8.56-14-16-9.78-10.61-10.45-10.5-16-17a123.54,123.54,0,0,1-14-19,80.27,80.27,0,0,1-8-17c-2.59-8.1-2.71-14.07-3-25-1-37.12-1.4-34.89-1-39a140.4,140.4,0,0,1,8-35c3.44-9.31,8.48-22.59,20-36,6-7,11.69-11.35,23-20,14-10.72,21-16.08,30-19,14.14-4.6,26.74-3,35-2,9.9,1.24,17,3.65,24,6,9.65,3.27,19.59,6.63,30,14,10.64,7.55,16.66,15.67,22,23a140.83,140.83,0,0,1,22,48,156.13,156.13,0,0,1,4,44,136.62,136.62,0,0,1-3,23,126.24,126.24,0,0,1-9,26c-8.78,18.52-20.21,30.75-29,40-9.45,10-11.31,9.89-20,20-7.81,9.09-13.06,15.3-17,25-3.71,9.12-4.17,16.17-5,29-1,15.19-2,30.62,5,34,2.6,1.26,6.34.87,8-1,2.63-3-1.21-8.42-2-20a40.27,40.27,0,0,1,0-8,38.53,38.53,0,0,1,4-13c7.38-15.41,5.89-16.16,10-23,5.63-9.39,8.85-8.65,22-22,9.84-10,16.18-18.66,23-28,8-11,12.37-16.93,17-26a148.18,148.18,0,0,0,13-39,161.55,161.55,0,0,0,2-43c-.76-8.93-2.67-29.53-13-52-4.12-9-26.5-55-78-73-9.55-3.33-29.71-10.11-55-6-25.56,4.16-42.82,17.25-57,28-10.88,8.26-24.65,18.7-36,37-15.13,24.41-16.67,47.8-18,68-1.48,22.43-3.42,51.91,12,82,13.31,26,38.72,50.77,40,52,5.37,5.19,13.2,12.16,22,24a156.12,156.12,0,0,1,17,29"
+                            transform="translate(-485.73 -236.25)" />
+                        <path class="cls-1"
+                            d="M577.21,616c-8,2.65-14.36,4.74-15,8-1.05,5.3,13.17,12.3,20,15,5.07,2,11.95,4.65,21,4,10.4-.74,21.33-5.66,21-9-.09-.85-.9-1.57-11-5-15.09-5.11-14.65-4-18-6-6.29-3.82-8.49-8.25-14-8A15.77,15.77,0,0,0,577.21,616Z"
+                            transform="translate(-485.73 -236.25)" />
+                        <path class="cls-1"
+                            d="M983.21,347a383.07,383.07,0,0,1,65-19c10-2,42.74-8,89-7,40.49.92,93.77,2.13,153,30,15,7.08,43,20.51,72,48,15.06,14.27,41.34,39.63,57,80,30.91,79.69-4.38,153.68-9,163-24.49,49.34-62.82,75.13-84,89-33.33,21.83-63.11,30.51-79,35-108.76,30.77-227.84-3-266-15V693a195.85,195.85,0,0,0,49,25c6.59,2.26,23.86,7.78,62,11,27.2,2.3,51.18,4.33,79,1,58.29-7,99.58-33,113-42,24.33-16.24,52.86-35.29,71-73,5-10.36,21.38-45.52,14-89-10.38-61.11-60.35-95.16-88-114-54.52-37.14-108.78-42.18-131-44-79.17-6.48-140.39,21.19-168,36Q982.71,375.53,983.21,347Z"
+                            transform="translate(-485.73 -236.25)" />
+                        <path class="cls-1"
+                            d="M972.21,349V742a450.67,450.67,0,0,1-52-2c-43.31-4.17-65.45-5.44-90-18-13.52-6.91-38.73-19.8-53-49-18.91-38.68-4.41-76.94-2-83a105.7,105.7,0,0,1,21-33c-4-.17-9.45-.29-16,0a172.91,172.91,0,0,0-20,2c-6,1.05-35,6.13-48,30-1.85,3.39-7.66,14.35-6,28,.74,6.11,2.94,12.49,25,40,11.23,14,16.85,21,23,28,9.84,11.17,18.52,20.05,23,35a64.17,64.17,0,0,1,2,9,83.25,83.25,0,0,1,0,51,74.46,74.46,0,0,1-16,34c-17.54,20.76-41.31,24.6-50,26-8.85,1.43-40.13,5.13-67-15-19.45-14.56-26.87-34.33-32-48a132.08,132.08,0,0,1-8-36V664h27q.49,39.51,1,79a81.37,81.37,0,0,0,9,35c3.54,6.84,9.25,17.83,22,26,14.27,9.15,28.52,9.1,34,9s20.48-.56,35-11a59.8,59.8,0,0,0,22-31V733a139.15,139.15,0,0,0-9-18c-11.84-19.9-23.28-27.65-38-45a215.73,215.73,0,0,1-23-33,104.21,104.21,0,0,1,0-50,67.64,67.64,0,0,1,13-24c13.77-16.2,31.72-20.95,47-25a141,141,0,0,1,49-4,71.94,71.94,0,0,1-15-17,78.49,78.49,0,0,1-9-21c-3.14-11.36-10-36.16,0-64,10.56-29.43,33.48-44.21,44-51,11.12-7.17,24.18-13,57-20A574.55,574.55,0,0,1,972.21,349Z"
+                            transform="translate(-485.73 -236.25)" />
+                        <path class="cls-1"
+                            d="M928.21,403q1,66,2,132h-87a40.37,40.37,0,0,1-22-8c-10.87-8.42-13.5-20.51-16-32-2.34-10.72-5.91-27.12,2-45,7-15.77,19-24,25-28,3.09-2,13.28-8.51,44-14A327.78,327.78,0,0,1,928.21,403Z"
+                            transform="translate(-485.73 -236.25)" />
+                        <path class="cls-1"
+                            d="M929.21,556V692a222,222,0,0,1-31,1c-26.42-1-49.14-1.82-69-17-4.83-3.69-18.21-14.2-24-33s-.59-35,2-43a85.64,85.64,0,0,1,23-36l10-7Z"
+                            transform="translate(-485.73 -236.25)" />
+                        <path class="cls-1" d="M627.21,612h-21V445a10.65,10.65,0,1,1,21-3Z"
+                            transform="translate(-485.73 -236.25)" />
+                        <path class="cls-1"
+                            d="M632.21,443l22,18q-4-14.49-8-29l31,10-18-28,24-21-39,3,25-33-34,17-3-48q-8,23-16,46l-30-32,9,38-60-1,53,23-31,38,28-7v32l18-28"
+                            transform="translate(-485.73 -236.25)" />
+                    </g>
+                </svg>
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html#about">ABOUT</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li id="team-dropdown" class="nav-drop">
+                <a>TEAM</a>
+            </li>
+            <li><a class="scroll" href="#footer">CONTACT</a></li>
+            <li>
+                <a class="blog-btn" href="https://cognizanttrances.wordpress.com/">BLOG</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- ==== Main Navbar End ==== -->
+
+    <!-- ==== Nav Dropdown ==== -->
+    <ul class="dropdown">
+        <li><a href="senior-team.html">SENIOR TEAM</a></li>
+        <li><a href="core-team.html">CORE TEAM</a></li>
+    </ul>
+    <!-- ==== Nav Dropdown End ==== -->
+
+    <div class="formbold-main-wrapper" style="margin-top: 8rem;">
+        <!-- Author: FormBold Team -->
+        <!-- Learn More: https://formbold.com -->
+        <div class="formbold-form-wrapper">
+            <form action="https://formbold.com/s/FORM_ID" method="POST">
+                <div class="formbold-steps">
+                    <ul>
+                        <li class="formbold-step-menu1 active">
+                            <span>1</span>
+                            Step 1
+                        </li>
+                        <li class="formbold-step-menu2">
+                            <span>2</span>
+                            Step 2
+                        </li>
+                        <li class="formbold-step-menu3">
+                            <span>3</span>
+                            Step 3
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="formbold-form-step-1 active">
+                    <div class="formbold-input-flex">
+                        <div>
+                            <label for="firstname" class="formbold-form-label"> Full Name </label>
+                            <input type="text" name="firstname" placeholder="Full Name" id="firstname"
+                                class="formbold-form-input" />
+                        </div>
+                        <div>
+                            <label for="email" class="formbold-form-label"> Email Address </label>
+                            <input type="email" name="email" placeholder="Email" id="email"
+                                class="formbold-form-input" />
+                        </div>
+                    </div>
+
+                    <!-- <div class="formbold-input-flex">
+                        <div>
+                            <label for="dob" class="formbold-form-label"> Date of Birth </label>
+                            <input type="date" name="dob" id="dob" class="formbold-form-input" />
+                        </div>
+                        <div>
+                            <label for="email" class="formbold-form-label"> Email Address </label>
+                            <input type="email" name="email" placeholder="example@mail.com" id="email"
+                                class="formbold-form-input" />
+                        </div>
+                    </div> -->
+
+                    <div>
+                        <label for="address" class="formbold-form-label"> Contact Number </label>
+                        <input type="text" name="address" id="address"
+                            placeholder="Your Contact Number" class="formbold-form-input" />
+                    </div>
+                </div>
+
+                <div class="formbold-form-step-2">
+                    <div>
+                        <label for="message" class="formbold-form-label"> Message </label>
+                        <textarea rows="6" name="message" id="message" placeholder="Type your message"
+                            class="formbold-form-input"></textarea>
+                    </div>
+                </div>
+
+                <div class="formbold-form-step-3">
+                    <div class="formbold-form-confirm">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                        </p>
+
+                        <div>
+                            <button class="formbold-confirm-btn active">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="11" cy="11" r="10.5" fill="white" stroke="#DDE3EC" />
+                                    <g clip-path="url(#clip0_1667_1314)">
+                                        <path
+                                            d="M9.83343 12.8509L15.1954 7.48828L16.0208 8.31311L9.83343 14.5005L6.12109 10.7882L6.94593 9.96336L9.83343 12.8509Z"
+                                            fill="#536387" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1667_1314">
+                                            <rect width="14" height="14" fill="white" transform="translate(4 4)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                Yes! I want it.
+                            </button>
+
+                            <button class="formbold-confirm-btn">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="11" cy="11" r="10.5" fill="white" stroke="#DDE3EC" />
+                                    <g clip-path="url(#clip0_1667_1314)">
+                                        <path
+                                            d="M9.83343 12.8509L15.1954 7.48828L16.0208 8.31311L9.83343 14.5005L6.12109 10.7882L6.94593 9.96336L9.83343 12.8509Z"
+                                            fill="#536387" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1667_1314">
+                                            <rect width="14" height="14" fill="white" transform="translate(4 4)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                No! I don’t want it.
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="formbold-form-btn-wrapper">
+                    <button class="formbold-back-btn">
+                        Back
+                    </button>
+
+                    <button class="formbold-btn">
+                        Next Step
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1675_1807)">
+                                <path
+                                    d="M10.7814 7.33312L7.20541 3.75712L8.14808 2.81445L13.3334 7.99979L8.14808 13.1851L7.20541 12.2425L10.7814 8.66645H2.66675V7.33312H10.7814Z"
+                                    fill="white" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1675_1807">
+                                    <rect width="16" height="16" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- AOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <!-- Script File -->
+    <script src="js/index-page.js" type="module"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="./registration.js"></script>
+
+
+</body>
+
+
+
+
+
+</html>
+
+<!-- <input type="submit" id="submit" value="Register" class="submit-btn">
+<input required="true" type="text" id="contact" placeholder="Contact Number"> -->

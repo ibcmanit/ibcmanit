@@ -3064,24 +3064,6 @@ p {
   color: var(--main-color) !important;
 }
 
-#event-home .home-content .hc-right .register_btn {
-  text-decoration   : none;
-  border            : 3px solid var(--main-color);
-  width             : 180px;
-  height            : 50px;
-  display           : -ms-grid;
-  display           : grid;
-  place-items       : center;
-  color             : var(--white);
-  font-size         : var(--sub-heading-size);
-  font-family       : "Saira Condensed", sans-serif;
-  margin-left       : auto;
-  background-color  : var(--main-color);
-  -webkit-box-shadow: 0px 10px 30px 0px rgb(237 187 95 / 50%);
-  box-shadow        : 0px 10px 30px 0px rgb(237 187 95 / 50%);
-  margin            : 3rem auto 0 0;
-}
-
 @media screen and (max-width: 992px) {
   #event-home .home-content {
     -webkit-box-orient   : vertical;
@@ -3120,8 +3102,6 @@ p {
   #event-home .home-content .hc-right h3 {
     color: var(--secondary-color) !important;
   }
-
-
 }
 
 @media screen and (max-width: 768px) {
@@ -3170,6 +3150,7 @@ p {
   -ms-flex-direction   : column;
   flex-direction       : column;
 }
+
 
 #event-home .home-content .hc-right h3 {
   color: var(--white);
@@ -3237,8 +3218,6 @@ p {
   display : flex;
 }
 
-
-
 @media screen and (max-width: 992px) {
   #event-home .more-content .content {
     -webkit-box-orient   : vertical;
@@ -3277,10 +3256,6 @@ p {
   color: var(--main-color);
 }
 
-#event-home .more-content .content .content-left .register_btn {
-  color: var(--main-color);
-}
-
 #event-home .more-content .content .content-left .details {
   margin-top           : 3rem;
   display              : -webkit-box;
@@ -3297,21 +3272,6 @@ p {
   font-size  : var(--sub-heading-size);
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-}
-
-#event-home .more-content .content .content-left .register_btn {
-  text-decoration : none;
-  border          : 3px solid var(--main-color);
-  width           : 180px;
-  height          : 50px;
-  display         : grid;
-  place-items     : center;
-  color           : var(--white);
-  font-size       : var(--sub-heading-size);
-  font-family     : "Saira Condensed", sans-serif;
-  background-color: var(--main-color);
-  box-shadow      : rgb(237 187 95 / 50%) 0px 10px 30px 0px;
-  margin          : 1.5rem auto 0px 0px;
 }
 
 #event-home .more-content .content .content-right {
@@ -3612,5 +3572,217 @@ p {
   box-shadow        : rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
   border-radius     : 5px;
 }
+
+
+/* Form CSS */
+
+.content__form__mun {
+  min-height: 110vh;
+}
+
+.content__form__mun h1 {
+  margin-top     : 80px;
+  text-align     : center;
+  justify-content: center;
+}
+
+.content__form__mun .line {
+  width        : 20%;
+  height       : 100%;
+  border-bottom: 3px solid var(--secondary-color);
+  margin-left  : auto;
+  margin-right : auto;
+}
+
+
+.content__form__mun .details {
+  width       : 80%;
+  margin-left : auto;
+  margin-right: auto;
+  margin-top  : 90px;
+}
+
+.content__form__mun .details .details__about h3 {
+  font-size: 40px;
+}
+
+.content__form__mun .details .details__about p {
+  font-weight: 400;
+  color      : rgba(0, 0, 0, 0.6);
+  font-size  : 20px;
+}
+
+.content__form__mun .details .eligible {
+  margin-top: 3rem;
+}
+
+.content__form__mun .details .eligible h3 {
+  font-size: 40px;
+}
+
+.content__form__mun .details .eligible p {
+  font-weight: 400;
+  color      : rgba(0, 0, 0, 0.6);
+  font-size  : 20px;
+}
+
+.content__form__mun .details .event__details {
+  margin-top: 3rem;
+}
+
+.content__form__mun .details .event__details h3 {
+  font-size: 40px;
+}
+
+.content__form__mun .details .event__details p {
+  font-weight: 400;
+  color      : rgba(0, 0, 0, 0.6);
+  font-size  : 30px;
+}
+
+.content__form__mun .details .event__details .list {
+  font-weight   : 400;
+  color         : rgba(0, 0, 0, 0.6);
+  font-size     : 20px;
+  position      : relative;
+  top           : 20px;
+  display       : flex;
+  flex-direction: column;
+  gap           : 1.5rem;
+  font-family   : "Poppins", sans-serif;
+}
+
+.content__form__mun .details .event__details .list li {
+  font-weight: 400;
+  color      : rgba(0, 0, 0, 0.6);
+  font-size  : 20px;
+  margin-left: 1rem;
+  font-style : var(--font-primary);
+
+}
+
+.content__form__mun .details .event__details .line__details {
+  width        : 15%;
+  height       : 80%;
+  border-bottom: 3px solid rgb(79, 74, 74);
+  position     : relative;
+  bottom       : 5px;
+  margin-right : auto;
+}
+
+.content__form__mun .details .event__details .judge {
+  margin-top: 40px;
+}
+
+.content__form__mun .details .event__details .prizes {
+  margin-top: 40px;
+}
+
+.content__form__mun .details .event__details .line__details__prizes {
+  width        : 5%;
+  height       : 80%;
+  border-bottom: 3px solid rgb(79, 74, 74);
+  position     : relative;
+  bottom       : 5px;
+  margin-right : auto;
+}
+
+.container {
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+  padding        : 25px;
+  min-height     : 150vh;
+  width          : 100%;
+}
+
+.container form {
+  padding      : 20px;
+  width        : 80%;
+  box-shadow   : 0px 25px 60px 0px rgba(0, 0, 0, .5);
+  min-height   : 100vh;
+  /* margin-top: 80px; */
+}
+
+.container form .row {
+  display  : flex;
+  flex-wrap: wrap;
+  gap      : 15px;
+}
+
+.container form .row .col {
+  flex: 1 1 250px;
+}
+
+.container form .row .col .title {
+  font-size     : 23px;
+  color         : #333;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  margin-left   : auto;
+  margin-right  : auto;
+  text-align    : center;
+}
+
+.container form .row .col .inputBox {
+  margin: 20px 0px;
+}
+
+
+
+.container form .row .col .inputBox input {
+  width         : 100%;
+  border        : none;
+  border-bottom : 1px solid #ccc;
+  padding       : 25px 15px;
+  font-size     : 18px;
+  text-transform: none;
+  outline       : none;
+  height        : fit-content;
+}
+
+.container form .row .col .inputBox input:focus {
+  border-bottom: 1px solid rgb(29, 141, 151);
+}
+
+.container form .row .col .flex {
+  display: flex;
+  gap    : 5rem;
+}
+
+.container form .row .col .flex .inputBox {
+  margin-top: 5px;
+}
+
+.container form .row .col .inputBox img {
+  height    : 34px;
+  margin-top: 5px;
+  filter    : drop-shadow(0 0 1px #000);
+}
+
+.container form .submit-btn {
+  text-decoration : none;
+  border          : 3px solid var(--para-text);
+  background-color: #14213d;
+  width           : 180px;
+  height          : 50px;
+  display         : -ms-grid;
+  display         : grid;
+  place-items     : center;
+  color           : var(--white);
+  font-size       : var(--sub-heading-size);
+  font-family     : "Saira Condensed", sans-serif;
+  margin-left     : auto;
+  width           : 30%;
+  height          : 50px;
+  margin-top      : 40px;
+  border-radius   : 10px;
+  box-shadow      : 0px 10px 30px 0px rgba(252, 163, 17, 0.5);
+  cursor          : pointer;
+  margin-left     : auto;
+  margin-right    : auto;
+}
+
+
 
 /*# sourceMappingURL=style.css.map */
