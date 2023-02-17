@@ -56,7 +56,7 @@ sections.forEach(section => {
 // change content on resize
 if(window.innerWidth<992) {
   const currEventContent = document.querySelector("#curr-event-content");
-  currEventContent.innerHTML = "MARKET GURU IS BACK!";
+  currEventContent.innerHTML = "Central India's prestigious Model United Nations";
 }
 
 
