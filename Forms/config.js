@@ -55,7 +55,7 @@ File_data_other.addEventListener("change", getFile)
 // img_btn.addEventListener('click' , uploadImage)
 
 var fileName;
-var fileItem;
+var fileItem = '';
 
 function getFile(e) {
     fileItem = e.target.files[0];
@@ -68,6 +68,12 @@ function getFile(e) {
 const uploadImage = (e) => {
 
     e.preventDefault()
+
+    if (fileItem == '') {
+        progress_manit.value = 0
+        progress_other.value = 0
+        alert("please upload a valid image")
+    }
 
     let storageRef = firebase.storage().ref("images_manit/" + fileName)
     let uploadTask = storageRef.put(fileItem)
@@ -104,6 +110,8 @@ const uploadImage = (e) => {
     }, () => {
         uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
             console.log('File available at', downloadURL);
+            url_data = downloadURL
+            alert("image uploaded")
         });
     })
 
@@ -128,6 +136,10 @@ submitButton.addEventListener("click", (e) => {
     let yr = document.getElementById('year').value;
 
 
+    let experience_manit = document.getElementById('experience_manit').value
+    let referral = document.getElementById('referral').value
+
+
 
     let File_other = document.getElementById('file_other').value;
     let File_manit = document.getElementById('file_manit').value;
@@ -137,14 +149,19 @@ submitButton.addEventListener("click", (e) => {
     if (cname == 'MANIT') {
 
 
-
-
-        if (Em == '' || Fname == '' || Ctn == '' || File_manit == '' || branch == '' || yr == '') {
-            alert("please fill all the necessary feilds!")
-            frm.reset();
+        if (url_data == '') {
+            alert("click on the upload button and upload a valid MANIT ID card")
         }
 
-        else if (Em != '' && Fname != '' && Ctn != '' && File_manit != '' && branch != '' && yr != '' && url_data != '') {
+        if (Em == '' || Fname == '' || Ctn == '' || File_manit == '' || branch == '' || yr == '' || experience_manit == '') {
+            alert("please fill all the necessary feilds!")
+            frm.reset();
+            progress_manit.value = 0;
+        }
+
+
+
+        else if (Em != '' && Fname != '' && Ctn != '' && File_manit != '' && branch != '' && yr != '' && url_data != '' && experience_manit != '') {
 
 
 
@@ -157,7 +174,8 @@ submitButton.addEventListener("click", (e) => {
                 Contact_no: Ctn,
                 Image: url_data,
                 Branch: branch,
-                Year: yr
+                Year: yr,
+                experience: experience_manit
 
 
 
@@ -165,6 +183,7 @@ submitButton.addEventListener("click", (e) => {
 
                 alert("Registration Successful!")
                 frm.reset();
+                progress_manit.value = 0;
             }).catch((error) => {
                 console.log(error);
             })
@@ -176,13 +195,19 @@ submitButton.addEventListener("click", (e) => {
     else if (cname == 'other') {
 
 
+        if (url_data == '') {
+            alert(" click on the upload button and please upload the valid payment Receipt!")
+        }
 
-        if (Em == '' || Fname == '' || Ctn == '' || File_other == '' || branch == '' || yr == '') {
+        if (Em == '' || Fname == '' || Ctn == '' || File_other == '' || branch == '' || yr == '' || experience_manit == '' || referral == '') {
             alert("please fill all the necessary feilds!")
+            progress_other.value = 0
             frm.reset();
         }
 
-        else if (Em != '' && Fname != '' && Ctn != '' && File_other != '' && branch != '' && yr != '' && url_data != '') {
+
+
+        else if (Em != '' && Fname != '' && Ctn != '' && File_other != '' && branch != '' && yr != '' && url_data != '' && experience_manit != '' && referral != '') {
 
             db_other.doc().set({
 
@@ -192,10 +217,13 @@ submitButton.addEventListener("click", (e) => {
                 Contact_no: Ctn,
                 Image: url_data,
                 Branch: branch,
-                Year: yr
+                Year: yr,
+                experience: experience_manit,
+                code: referral
             }).then(() => {
                 alert("Registration Successful!")
                 frm.reset();
+                progress_other.value = 0
             }).catch((error) => {
                 console.log(error);
             })

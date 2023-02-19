@@ -47,6 +47,42 @@ h1 {
     margin-right    : auto;
 }
 
+#upload_manit_img {
+    outline        : none;
+    border         : none;
+    text-decoration: none;
+    margin-top     : 0.5rem;
+    height         : 30px;
+    width          : 120px;
+    border         : 1px solid rgb(32, 24, 24);
+    border-radius  : 6px;
+}
+
+#upload_other_img {
+    outline        : none;
+    border         : none;
+    text-decoration: none;
+    margin-top     : 0.5rem;
+    height         : 30px;
+    width          : 120px;
+    border         : 1px solid rgb(32, 24, 24);
+    border-radius  : 6px;
+}
+
+#uploadProgress_manit{
+    width: 100px;
+    height: 20px;
+    margin-left: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+#uploadProgress_other{
+    width: 100px;
+    height: 20px;
+    margin-left: 0.8rem;
+    margin-top: 0.5rem;
+}
+
 #qr_img {
     height     : 30%;
     width      : 40%;
