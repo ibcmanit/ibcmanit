@@ -29,8 +29,8 @@
 </head>
 
 <body>
-  
-  
+
+
 
   <!-- ==== Secondary Nav ==== -->
   <nav id="secondary-nav">
@@ -179,10 +179,12 @@
             <input class="form-control" type="text" name="" required id="branch" />
           </div>
           <div class="mb-3" id="manit_f">
-            <p>Upload your MANIT ID Card for proof (.jpg or .pdf) Provisional ID Card, Admission Letter or
+            <p>Upload your MANIT ID Card for proof (.jpg or .png or .jpeg) Provisional ID Card, Admission Letter or
               Semester
               Fee receipt is also acceptable.</p>
-            <input class="form-control" type="file" name="filename" id="file">
+            <input class="form-control" type="file" name="filename_manit" id="file_manit" />
+            <button id="upload_manit_img">Upload Image</button>
+            <progress value="0" max="100" id="uploadProgress_manit">0%</progress>
           </div>
           <div class="mb-3" id="other_f">
             <div class="mb-3">
@@ -194,7 +196,9 @@
               <img src="qr code.jpeg" id="qr_img" alt="" id="qrimg">
             </div>
             <p style="margin-top: 3rem;">Payment Receipt</p>
-            <input class="form-control" type="file" id="file_other" name="filename" required>
+            <input class="form-control" type="file" id="file_other" name="filename_other" required>
+            <button id="upload_other_img">Upload Image</button>
+            <progress value="0" max="100" id="uploadProgress_other">0%</progress>
           </div>
         </div>
         <div class="">
@@ -222,9 +226,9 @@
 
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
 
-  <script src="config.js"></script>
+  <script src="config.js" type="module"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <!-- GSAP -->
