@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Lato:wght@400;700&family=Lobster&family=Montserrat:ital,wght@0,100;0,300;0,400;0,800;1,100&family=Mulish:wght@200&family=Noto+Sans:ital,wght@1,200&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400&family=PT+Serif&family=Poppins:ital,wght@0,200;0,600;1,500&family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;1,300&family=Spline+Sans:wght@300&display=swap');
+
+h1 {
+    font-family   : "Playfair Display", serif;
+    font-weight   : 700;
+    text-transform: uppercase;
+    font-size     : var(--heading-size);
+    line-height   : 3em;
+    font-size     : 3em;
+    text-align    : center;
+    color         : #14213d;
+    margin-top    : 2em;
+
+}
+
+.letters {
+    background-color: #14213d;
+    padding         : 3em;
+    color           : #fdb541;
+    border-radius   : 3em 3em 0 0;
+}
+
+.certi {
+    text-align: center;
+    margin-top: 2em;
+
+}
+
+.certi-img {
+    margin-top: 11em;
+}
+
+
+.lor {
+    text-align: center;
+}
+
+.main_f {
+    /* width: 1200px; */
+    background-color: #fff;
+    padding         : 2em;
+    border-radius   : 20px;
+    width           : 70%;
+    margin-top      : 1.5rem;
+    box-shadow      : rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    margin-left     : auto;
+    margin-right    : auto;
+}
+
+#upload_manit_img {
+    outline        : none;
+    border         : none;
+    text-decoration: none;
+    margin-top     : 0.5rem;
+    height         : 30px;
+    width          : 120px;
+    border         : 1px solid rgb(32, 24, 24);
+    border-radius  : 6px;
+}
+
+#upload_other_img {
+    outline        : none;
+    border         : none;
+    text-decoration: none;
+    margin-top     : 0.5rem;
+    height         : 30px;
+    width          : 120px;
+    border         : 1px solid rgb(32, 24, 24);
+    border-radius  : 6px;
+}
+
+#uploadProgress_manit{
+    width: 150px;
+    height: 20px;
+    margin-left: 0.8rem;
+    margin-top: 0.rem;
+}
+
+#uploadProgress_other{
+    width: 100px;
+    height: 20px;
+    margin-left: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+#qr_img {
+    height     : 30%;
+    width      : 40%;
+    margin-left: 2rem;
+}
+
+@media(max-width: 600px) {
+    #qr_img {
+        width      : 100%;
+        height     : 100;
+        margin-left: 0rem;
+    }
+}
+
+
+
+@media(max-width: 1000px) {
+    .main_f {
+        width: 100%;
+    }
+}
+
+.col {
+    margin-left: 0.5em;
+
+}
+
+.mb-3 {
+    text-align: start;
+}
+
+.heading_mun {
+    font-size  : 2rem;
+    margin-top : 8rem;
+    color      : black;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.btn {
+    text-decoration   : none;
+    border            : 3px solid var(--main-color);
+    width             : 130px;
+    height            : 50px;
+    display           : -ms-grid;
+    display           : grid;
+    place-items       : center;
+    /* color          : var(--white); */
+    font-size         : var(--sub-heading-size);
+    font-family       : "Saira Condensed", sans-serif;
+    margin-left       : auto;
+    background-color  : var(--main-color);
+    -webkit-box-shadow: 0px 10px 30px 0px rgb(237 187 95 / 50%);
+    box-shadow        : 0px 10px 30px 0px rgb(237 187 95 / 50%);
+    margin            : 5rem auto 0 0;
+    width             : 10px;
+    margin-left       : auto;
+    margin-right      : auto;
+    width             : 60%;
+}
+
+
+@media(max-width: 700px) {
+    .btn {
+        width: 100%;
+    }
+}
+
+
+
+
+@media (max-width: 500px) {
+    .main_f {
+        border-radius: 0em;
+        margin-top   : 0;
+    }
+
+    .col {
+        width    : 100%;
+        flex-wrap: wrap;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .letters {
+        border-radius: 0;
+    }
+
+    .certi-img {
+        margin-top: 0em;
+    }
+
+    .letters h3 {
+        font-size: 1.5em;
+    }
+
+    .letters .col {
+        margin-top: 3em;
+    }
+
+    .heading {
+        margin-top: 3em;
+    }
+}
