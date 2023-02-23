@@ -117,51 +117,47 @@ const uploadImage = (e) => {
         alert("please upload a valid image")
     }
 
-    else if (fileItem != '') {
+    else if()
+
+    let storageRef = firebase.storage().ref("images_manit/" + fileName)
+    let uploadTask = storageRef.put(fileItem)
+
+    // uploadTask.then(snapshot => snapshot.ref.getDownloadURL())
+    //     .then(url => {
+    //         console.log(url);
+    //         url_data = url;
+    //         alert('image uploaded successfully');
+    //     }).catch(console.error);
 
 
 
-        let storageRef = firebase.storage().ref("images_manit/" + fileName)
-        let uploadTask = storageRef.put(fileItem)
+    uploadTask.on("state_changed", (snapshot) => {
+        console.log(snapshot)
 
-        // uploadTask.then(snapshot => snapshot.ref.getDownloadURL())
-        //     .then(url => {
-        //         console.log(url);
-        //         url_data = url;
-        //         alert('image uploaded successfully');
-        //     }).catch(console.error);
+        const percent = Math.round(
+            (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+        );
 
+        console.log(percent)
 
+        if (cname == 'MANIT') {
+            progress_manit.value = percent
+        }
 
-        uploadTask.on("state_changed", (snapshot) => {
-            console.log(snapshot)
-
-            const percent = Math.round(
-                (snapshot.bytesTransferred / snapshot.totalBytes) * 100
-            );
-
-            console.log(percent)
-
-            if (cname == 'MANIT') {
-                progress_manit.value = percent
-            }
-
-            if (cname == 'other') {
-                progress_other.value = percent
-            }
+        if (cname == 'other') {
+            progress_other.value = percent
+        }
 
 
-        }, (error) => {
-            console.log(error)
-        }, () => {
-            uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
-                console.log('File available at', downloadURL);
-                url_data = downloadURL
-                alert("image uploaded")
-            });
-        })
-
-    }
+    }, (error) => {
+        console.log(error)
+    }, () => {
+        uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
+            console.log('File available at', downloadURL);
+            url_data = downloadURL
+            alert("image uploaded")
+        });
+    })
 
 }
 
@@ -263,11 +259,11 @@ submitButton.addEventListener("click", (e) => {
 
     else if (PhoneNumber(Ctn) == false) {
 
-        if (Ctn == '') {
+        if(Ctn == ''){
             alert("please fill your contact details!")
         }
 
-        else if (Ctn != '') {
+        else if(Ctn != ''){
             alert("Phone number should contain only numbers!")
             Ctn = "";
         }
