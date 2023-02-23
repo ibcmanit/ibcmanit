@@ -1,18 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Lato:wght@400;700&family=Lobster&family=Montserrat:ital,wght@0,100;0,300;0,400;0,800;1,100&family=Mulish:wght@200&family=Noto+Sans:ital,wght@1,200&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400&family=PT+Serif&family=Poppins:ital,wght@0,200;0,600;1,500&family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;1,300&family=Spline+Sans:wght@300&display=swap');
 
-h1 {
-    font-family   : "Playfair Display", serif;
-    font-weight   : 700;
-    text-transform: uppercase;
-    font-size     : var(--heading-size);
-    line-height   : 3em;
-    font-size     : 3em;
-    text-align    : center;
-    color         : #14213d;
-    margin-top    : 2em;
-
-}
-
 .letters {
     background-color: #14213d;
     padding         : 3em;
@@ -47,15 +34,29 @@ h1 {
     margin-right    : auto;
 }
 
+.main_f label {
+    color: #14213d;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
 #upload_manit_img {
     outline        : none;
     border         : none;
     text-decoration: none;
     margin-top     : 0.5rem;
     height         : 30px;
-    width          : 120px;
-    border         : 1px solid rgb(32, 24, 24);
-    border-radius  : 6px;
+    width          : 15%;
+    border-radius  : 2px;
+
+    border          : 1px solid var(--main-color);
+    place-items     : center;
+    color           : var(--white);
+    font-size       : var(--sub-heading-size);
+    font-family     : "Saira Condensed", sans-serif;
+    color           : var(--white);
+    background-color: var(--secondary-color);
+    border          : none;
 }
 
 #upload_other_img {
@@ -64,20 +65,28 @@ h1 {
     text-decoration: none;
     margin-top     : 0.5rem;
     height         : 30px;
-    width          : 120px;
-    border         : 1px solid rgb(32, 24, 24);
-    border-radius  : 6px;
+    width          : 15%;
+    border-radius  : 2px;
+    border          : 1px solid var(--main-color);
+    place-items     : center;
+    color           : var(--white);
+    font-size       : var(--sub-heading-size);
+    font-family     : "Saira Condensed", sans-serif;
+    color           : var(--white);
+    background-color: var(--secondary-color);
+    border          : none;
 }
 
 #uploadProgress_manit{
-    width: 150px;
+    width: 75%;
     height: 20px;
+    /* color: #fdb541; */
     margin-left: 0.8rem;
     margin-top: 0.8rem;
+    /* background: #fdb541; */
 }
-
 #uploadProgress_other{
-    width: 100px;
+    width: 75%;
     height: 20px;
     margin-left: 0.8rem;
     margin-top: 0.5rem;
@@ -89,11 +98,35 @@ h1 {
     margin-left: 2rem;
 }
 
+.captcha_box {
+    
+}
+.captcha_box input {
+    width: 20%;
+    height: 80%;
+}
+
 @media(max-width: 600px) {
+    #upload_other_img {
+        width: 55%;
+    }
+    #uploadProgress_other{
+        width: 35%;
+    }
+    #upload_manit_img {
+        width: 55%;
+    }
+    #uploadProgress_manit{
+        width: 35%;
+    }
     #qr_img {
         width      : 100%;
         height     : 100;
         margin-left: 0rem;
+    }
+    .captcha_box input {
+        width: 80%;
+        height: 80%;
     }
 }
 

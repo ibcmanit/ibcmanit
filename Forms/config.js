@@ -75,7 +75,7 @@ function validateCaptcha() {
     }
 }
 
-createCaptcha()
+createCaptcha();
 
 var frm = document.getElementById('frm');
 
@@ -114,7 +114,7 @@ const uploadImage = (e) => {
     if (fileItem == '') {
         progress_manit.value = 0
         progress_other.value = 0
-        alert("please upload a valid image")
+        alert("Please upload a valid image.")
     }
 
     else if (fileItem != '') {
@@ -157,12 +157,10 @@ const uploadImage = (e) => {
             uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
                 console.log('File available at', downloadURL);
                 url_data = downloadURL
-                alert("image uploaded")
+                alert("Image uploaded")
             });
         })
-
     }
-
 }
 
 img_btn.addEventListener('click', uploadImage)
@@ -240,7 +238,7 @@ submitButton.addEventListener("click", (e) => {
     if (validateFullName(Fname) == false) {
 
         if (Fname == '') {
-            alert("please fill your name!")
+            alert("Please fill your name!")
         }
 
         else if (Fname != '') {
@@ -252,7 +250,7 @@ submitButton.addEventListener("click", (e) => {
     else if (Email(Em) == false) {
 
         if (Em == '') {
-            alert("please fill your Email!")
+            alert("Please fill your Email!")
         }
 
         else if (Em != '') {
@@ -264,7 +262,7 @@ submitButton.addEventListener("click", (e) => {
     else if (PhoneNumber(Ctn) == false) {
 
         if (Ctn == '') {
-            alert("please fill your contact details!")
+            alert("Please fill your contact details!")
         }
 
         else if (Ctn != '') {
@@ -281,19 +279,19 @@ submitButton.addEventListener("click", (e) => {
 
 
             if (Em == '' && Fname == '' && Ctn == '' && File_manit == '' && branch == '' && yr == '' && experience_manit == '') {
-                alert("please fill all the necessary feilds!")
+                alert("Please fill all the necessary feilds!")
             }
 
             else if (Fname == '') {
-                alert("please fill your name")
+                alert("Please fill your name")
             }
 
             else if (Em == '') {
-                alert("please fill your e-mail")
+                alert("Please fill your e-mail")
             }
 
             else if (Ctn == '') {
-                alert("please fill you contact details!")
+                alert("Please fill you contact details!")
             }
 
             else if (yr == '') {
@@ -301,11 +299,11 @@ submitButton.addEventListener("click", (e) => {
             }
 
             else if (branch == '') {
-                alert("please select your branch")
+                alert("Please select your branch")
             }
 
             else if (experience_manit == '') {
-                alert("please fill the experience column")
+                alert("Please fill the experience column")
             }
 
             else if (File_manit == '') {
@@ -314,7 +312,7 @@ submitButton.addEventListener("click", (e) => {
 
 
             else if (url_data == '') {
-                alert(" click on the upload button and please upload the valid payment Receipt!")
+                alert(" Click on the upload button and Please upload the valid payment Receipt!")
             }
 
             else if (flag == false) {
@@ -355,42 +353,42 @@ submitButton.addEventListener("click", (e) => {
         else if (cname == 'other') {
 
             if (Em == '' && Fname == '' && Ctn == '' && File_manit == '' && branch == '' && yr == '' && experience_manit == '' && Oth == '') {
-                alert("please fill all the necessary feilds!")
+                alert("Please fill all the necessary feilds!")
             }
 
             else if (Fname == '') {
-                alert("please fill your name")
+                alert("Please fill your name")
             }
 
 
             else if (Em == '') {
-                alert("please fill your e-mail")
+                alert("Please fill your e-mail")
             }
 
 
             else if (Ctn == '') {
-                alert("please fill you contact details!")
+                alert("Please fill you contact details!")
             }
 
             else if (yr == '') {
-                alert("fill your year")
+                alert("Fill your year")
             }
 
             else if (branch == '') {
-                alert("please select your branch")
+                alert("Please select your branch")
             }
 
             else if (experience_manit == '') {
-                alert("please fill the experience column")
+                alert("Please fill the experience column")
             }
 
 
             else if (referral == '') {
-                alert("please fill the referral column!")
+                alert("Please fill the referral column!")
             }
 
             else if (Oth == '') {
-                alert("please fill your institute name")
+                alert("Please fill your institute name")
             }
 
             else if (File_other == '') {
@@ -399,11 +397,11 @@ submitButton.addEventListener("click", (e) => {
 
 
             else if (url_data == '') {
-                alert(" click on the upload button and please upload the valid payment Receipt!")
+                alert(" Click on the upload button and Please upload the valid payment Receipt!")
             }
 
             else if (flag == false) {
-                alert("Invalid Captcha. try Again!");
+                alert("Invalid Captcha. Try Again!");
             }
 
 
