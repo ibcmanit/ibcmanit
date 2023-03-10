@@ -181,8 +181,10 @@ submitButton.addEventListener("click", (e) => {
     let yr = document.getElementById('year').value;
 
 
-    let experience_manit = document.getElementById('experience_manit').value
-    let referral = document.getElementById('referral').value
+    let experience_manit = document.getElementById('experience_manit').value;
+    let committee = document.getElementById('committee').value;
+    let referral = document.getElementById('referral').value;
+    let transaction_id = document.getElementById('transaction_id').value;
 
 
 
@@ -278,7 +280,7 @@ submitButton.addEventListener("click", (e) => {
         if (cname == 'MANIT') {
 
 
-            if (Em == '' && Fname == '' && Ctn == '' && File_manit == '' && branch == '' && yr == '' && experience_manit == '') {
+            if (Em == '' && Fname == '' && Ctn == '' && File_manit == '' && branch == '' && yr == '' && experience_manit == ''&& committee == '') {
                 alert("Please fill all the necessary feilds!")
             }
 
@@ -306,6 +308,10 @@ submitButton.addEventListener("click", (e) => {
                 alert("Please fill the experience column")
             }
 
+            else if (committee == '') {
+                alert("Please fill the committee column")
+            }
+
             else if (File_manit == '') {
                 alert("Please select an image to upload!")
             }
@@ -319,7 +325,7 @@ submitButton.addEventListener("click", (e) => {
                 alert("Invalid Captcha. try Again!");
             }
 
-            else if (Em != '' && Fname != '' && Ctn != '' && File_manit != '' && branch != '' && yr != '' && url_data != '' && experience_manit != '' && flag == true) {
+            else if (Em != '' && Fname != '' && Ctn != '' && File_manit != '' && branch != '' && yr != '' && url_data != '' && experience_manit != '' && committee != '' && flag == true) {
 
 
 
@@ -333,7 +339,8 @@ submitButton.addEventListener("click", (e) => {
                     Image: url_data,
                     Branch: branch,
                     Year: yr,
-                    experience: experience_manit
+                    experience: experience_manit,
+                    committee: committee
 
 
 
@@ -352,7 +359,7 @@ submitButton.addEventListener("click", (e) => {
 
         else if (cname == 'other') {
 
-            if (Em == '' && Fname == '' && Ctn == '' && File_manit == '' && branch == '' && yr == '' && experience_manit == '' && Oth == '') {
+            if (Em == '' && Fname == '' && Ctn == '' && File_manit == '' && branch == '' && yr == '' && experience_manit == '' && committee == '' && Oth == '') {
                 alert("Please fill all the necessary feilds!")
             }
 
@@ -382,9 +389,15 @@ submitButton.addEventListener("click", (e) => {
                 alert("Please fill the experience column")
             }
 
+            else if (committee == '') {
+                alert("Please fill the committee column")
+            }
 
             else if (referral == '') {
                 alert("Please fill the referral column!")
+            }
+            else if (transaction_id == '') {
+                alert("Please fill the transaction_id column!")
             }
 
             else if (Oth == '') {
@@ -406,7 +419,7 @@ submitButton.addEventListener("click", (e) => {
 
 
 
-            else if (Em != '' && Fname != '' && Ctn != '' && File_other != '' && branch != '' && yr != '' && url_data != '' && experience_manit != '' && referral != '' && Oth != '' && flag == true) {
+            else if (Em != '' && Fname != '' && Ctn != '' && File_other != '' && branch != '' && yr != '' && url_data != '' && experience_manit != '' && committee != '' && referral != '' &&  transaction_id != '' && Oth != '' && flag == true) {
 
                 db_other.doc().set({
 
@@ -418,7 +431,9 @@ submitButton.addEventListener("click", (e) => {
                     Branch: branch,
                     Year: yr,
                     experience: experience_manit,
-                    code: referral
+                    committee:committee,
+                    code: referral,
+                    transaction: transaction_id
                 }).then(() => {
                     alert("Registration Successful!")
                     frm.reset();
