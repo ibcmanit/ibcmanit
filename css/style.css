@@ -146,7 +146,7 @@ p {
 }
 
 .icon--menu-toggle {
-  --size           : calc(1rem + 4vmin);
+  --size           : calc(1rem + 3.8vmin);
   display          : -webkit-box;
   display          : -ms-flexbox;
   display          : flex;
@@ -160,6 +160,7 @@ p {
   height           : var(--size);
   stroke-width     : 6;
   z-index          : 1001;
+  padding: 5px;
 }
 
 .icon-group {
