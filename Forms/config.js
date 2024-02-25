@@ -1,14 +1,13 @@
 
 const firebaseConfig = {
-    apiKey: "AIzaSyA8uia2DvT04dUbAhvXEpSGkWav1h08GGo",
-    authDomain: "mun-database-b0bc3.firebaseapp.com",
-    databaseURL: "https://mun-database-b0bc3-default-rtdb.firebaseio.com",
-    projectId: "mun-database-b0bc3",
-    storageBucket: "mun-database-b0bc3.appspot.com",
-    messagingSenderId: "690798009433",
-    appId: "1:690798009433:web:4862ec4a7b36226d676548",
-    measurementId: "G-LTL4TTP4HN"
-};
+    apiKey: "AIzaSyD7RQgc4aktnlCh2Qqg-fDQV3A7R2sGNIA",
+    authDomain: "mun-database-24-7a61b.firebaseapp.com",
+    projectId: "mun-database-24-7a61b",
+    storageBucket: "mun-database-24-7a61b.appspot.com",
+    messagingSenderId: "1042043337052",
+    appId: "1:1042043337052:web:7cf2e1f73e18d74e302999",
+    measurementId: "G-HTB8H7Y3YG"
+  };
 
 
 
@@ -308,8 +307,8 @@ submitButton.addEventListener("click", (e) => {
                 alert("Please fill the experience column")
             }
 
-            else if (committee == '') {
-                alert("Please fill the committee column")
+            else if (committee == '' || committee === "Choose a Committee") {
+                alert("Please choose the Committee")
             }
 
             else if (File_manit == '') {
@@ -389,8 +388,8 @@ submitButton.addEventListener("click", (e) => {
                 alert("Please fill the experience column")
             }
 
-            else if (committee == '') {
-                alert("Please fill the committee column")
+            else if (committee == '' || committee === "Choose a Committee") {
+                alert("Please choose the Committee")
             }
 
             else if (referral == '') {
