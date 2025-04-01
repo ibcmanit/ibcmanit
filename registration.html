@@ -235,24 +235,41 @@
 
                   <div class="mb-3">
                     <label for="committee_selection" class="form-label">Select one of the following Committees.</label>
+                    <!-- <label for="committee_selection" class="form-label">We have Three categories of 
+                      Committees.</label> -->
                     <select class="form-select" id="committee" aria-label="Default select example" required>
                       <!-- <option selected="MANIT">Select Your College</option> -->
-                      <option value="CCPCJ">CCPCJ- Transnational Organized Crime Integration Into Global Society
+                      <!-- <option value="CCPCJ">CCPCJ- Transnational Organized Crime Integration Into Global Society
                       </option>
                       <option value="Specpol">Specpol- Discussing the impact of neocolonialism on political stability and sustainability</option>
                       <option value="Disec">Disec- Evaluating the status of treaties concerning the nuclear armament programme within the international community</option>
                       <option value="Ecosoc">Ecosoc - Addressing the global recession and promoting sustainable recovery</option>
-                      <option value="AIPPM">AIPPM- Discussing the Citizenship Amendment Act (CAA) and National Register of Citizens (NRC) and its impact on Indian citizens</option>
+                      <option value="AIPPM">AIPPM- Discussing the Citizenship Amendment Act (CAA) and National Register of Citizens (NRC) and its impact on Indian citizens</option> -->
+                   <!-- // new changes  -->
+                   <option value="International">International (UN Based)
+                  </option>
+                  <option value="National">National
+                  </option>
+                  <option value="Fictional"> Fictonal(Mythological +War Cabinet) </option>
+              
                     </select>
                   </div>
         
                   <div class="mb-3" id="manit_f">
-                    <label class="form-label">Upload your MANIT ID Card for proof (.jpg or .png or .jpeg) Provisional ID Card, Admission Letter or
+                    <!-- <label class="form-label">Upload your MANIT ID Card for proof (.jpg or .png or .jpeg) Provisional ID Card, Admission Letter or
                       Semester
-                      Fee receipt is also acceptable.</label>
-                          <input class="form-control" type="file" name="filename_manit" id="file_manit" />
-                          <button id="upload_manit_img">Upload Image</button>
-                          <progress  value="0" max="100" id="uploadProgress_manit">0%</progress>
+                      Fee receipt is also acceptable.</label> -->
+                      <label class="form-label">Upload your MANIT ID Card for proof (.jpg or .png or .jpeg) Provisional ID Card, Admission Letter or
+                        Semester Fee receipt is also acceptable.
+                         Upload it on Google Drive and provide the accessible link (Ensure view access is enabled).
+                       </label>
+                          <!-- <input class="form-control" type="file" name="filename_manit" id="file_manit" />
+                          <button id="upload_manit_img">Upload Image</button> -->
+                         <input type="url" id="file_manit" name="filename_manit" placeholder="Paste link here" required>
+                         <br>
+                         <!-- <label for="drive_link">Upload Google Drive Link</label> -->
+                         <!-- <button class="blog-btn" id="drive_link">Upload Google Drive Link</button> 
+                          <progress  value="0" max="100" id="uploadProgress_manit">0%</progress> -->
                   </div>
                   <div class="mb-3" id="other_f">
                     <div class="mb-3">
@@ -270,14 +287,24 @@
         
                     <label class="form-label" style="margin-top: 1rem;">Pay rs. 699 (early bird)</label>
                     <div class="qr" id="qr">
-                      <img src="forms/qr code.jpeg" id="qr_img" alt="" id="qrimg">
+                      <!-- <img src="forms/qr code.jpeg" id="qr_img" alt="" id="qrimg"> -->
+                       <!-- new changes -->
+                      <img src="Forms/MUN'25 QR code.jpeg.JPG" id="qr_img" alt="" id="qrimg">
                     </div>
                     <!-- <p style="margin-top: 3rem;">Payment Receipt</p> -->
-                    <label class="form-label" style="margin-top: 1rem;">Payment Receipt</label>
-                    <input class="form-control" type="file" id="file_other" name="filename_other" required>
-                    <button class="blog-btn" id="upload_other_img">Upload Image</button>
-                    <progress value="0" max="100" id="uploadProgress_other">0%</progress>
-
+                    <label class="form-label" style="margin-top: 1rem;">Upload your Payment Receipt to Google Drive and provide the accessible link (Ensure view access is enabled) </label>
+                    <!-- <input class="form-control" type="file" id="file_other" name="filename_other" required>
+                    <button class="blog-btn" id="upload_other_img">Upload Image</button> -->
+                      <!-- new changes -->
+                      <br>
+                     
+                    <input type="url" id="file_other" name="filename_other" placeholder="Paste link here" required>
+                    <br>
+                  
+                    <!-- <label for="drive_link">Upload Google Drive Link</label> -->
+                    <!-- <button class="blog-btn" id="drive_link">Upload Google Drive Link</button>  -->
+                    <!-- <progress value="0" max="100" id="uploadProgress_other">0%</progress> -->
+                    <br>
                     <div class="mb-3">
                       <label class="form-label">Transaction ID</label>
                       <input class="form-control" type="text" name="other" id="transaction_id" />
