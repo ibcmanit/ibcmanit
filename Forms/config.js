@@ -1,15 +1,23 @@
 
-const firebaseConfig = {
-    apiKey: "AIzaSyD7RQgc4aktnlCh2Qqg-fDQV3A7R2sGNIA",
-    authDomain: "mun-database-24-7a61b.firebaseapp.com",
-    projectId: "mun-database-24-7a61b",
-    storageBucket: "mun-database-24-7a61b.appspot.com",
-    messagingSenderId: "1042043337052",
-    appId: "1:1042043337052:web:7cf2e1f73e18d74e302999",
-    measurementId: "G-HTB8H7Y3YG"
+// const firebaseConfig = {
+//     apiKey: "AIzaSyD7RQgc4aktnlCh2Qqg-fDQV3A7R2sGNIA",
+//     authDomain: "mun-database-24-7a61b.firebaseapp.com",
+//     projectId: "mun-database-24-7a61b",
+//     storageBucket: "mun-database-24-7a61b.appspot.com",
+//     messagingSenderId: "1042043337052",
+//     appId: "1:1042043337052:web:7cf2e1f73e18d74e302999",
+//     measurementId: "G-HTB8H7Y3YG"
+//   };
+
+  const firebaseConfig = {
+       apiKey: "AIzaSyD-zwapk_5hUSQDApmpPjf-GIphDMfZQeM",
+       authDomain: "mun-database-25.firebaseapp.com",
+       projectId: "mun-database-25",
+       storageBucket: "mun-database-25.firebasestorage.app",
+       messagingSenderId: "284628726892",
+       appId: "1:284628726892:web:961ce0922aab43fa63d449",
+       measurementId: "G-CJNMV9W851"
   };
-
-
 
 firebase.initializeApp(firebaseConfig);
 var firestore = firebase.firestore();
@@ -81,10 +89,10 @@ var frm = document.getElementById('frm');
 let submitButton = document.getElementById('submit');
 let File_data_manit = document.getElementById('file_manit');
 let File_data_other = document.getElementById('file_other');
-let img_btn = document.getElementById('upload_manit_img');
-let img_btn_other = document.getElementById('upload_other_img');
-var progress_manit = document.getElementById('uploadProgress_manit')
-var progress_other = document.getElementById('uploadProgress_other')
+// let img_btn = document.getElementById('upload_manit_img');
+// let img_btn_other = document.getElementById('upload_other_img');
+// var progress_manit = document.getElementById('uploadProgress_manit')
+// var progress_other = document.getElementById('uploadProgress_other')
 
 let url_data = '';
 
@@ -106,64 +114,65 @@ function getFile(e) {
     console.log(fileName)
 }
 
-const uploadImage = (e) => {
+// // const uploadImage = (e) => {
 
-    e.preventDefault()
+// //     e.preventDefault()
 
-    if (fileItem == '') {
-        progress_manit.value = 0
-        progress_other.value = 0
-        alert("Please upload a valid image.")
-    }
+// //     if (fileItem == '') {
+// //         progress_manit.value = 0
+// //         progress_other.value = 0
+// //         alert("Please upload a valid image.")
+// //     }
 
-    else if (fileItem != '') {
-
-
-
-        let storageRef = firebase.storage().ref("images_manit/" + fileName)
-        let uploadTask = storageRef.put(fileItem)
-
-        // uploadTask.then(snapshot => snapshot.ref.getDownloadURL())
-        //     .then(url => {
-        //         console.log(url);
-        //         url_data = url;
-        //         alert('image uploaded successfully');
-        //     }).catch(console.error);
+// //     else if (fileItem != '') {
 
 
 
-        uploadTask.on("state_changed", (snapshot) => {
-            console.log(snapshot)
+// //         let storageRef = firebase.storage().ref("images_manit/" + fileName)
+// //         let uploadTask = storageRef.put(fileItem)
 
-            const percent = Math.round(
-                (snapshot.bytesTransferred / snapshot.totalBytes) * 100
-            );
-
-            console.log(percent)
-
-            if (cname == 'MANIT') {
-                progress_manit.value = percent
-            }
-
-            if (cname == 'other') {
-                progress_other.value = percent
-            }
+//         // uploadTask.then(snapshot => snapshot.ref.getDownloadURL())
+//         //     .then(url => {
+//         //         console.log(url);
+//         //         url_data = url;
+//         //         alert('image uploaded successfully');
+//         //     }).catch(console.error);
 
 
-        }, (error) => {
-            console.log(error)
-        }, () => {
-            uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
-                console.log('File available at', downloadURL);
-                url_data = downloadURL
-                alert("Image uploaded")
-            });
-        })
-    }
-}
 
-img_btn.addEventListener('click', uploadImage)
-img_btn_other.addEventListener('click', uploadImage)
+//         // uploadTask.on("state_changed", (snapshot) => {
+//         //     console.log(snapshot)
+
+//         //     const percent = Math.round(
+//         //         (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+//         //     );
+
+//         //     console.log(percent)
+
+//         //     if (cname == 'MANIT') {
+//         //         progress_manit.value = percent
+//         //     }
+
+//         //     if (cname == 'other') {
+//         //         progress_other.value = percent
+//         //     }
+
+
+//         // }, (error) => {
+//         //     console.log(error)
+//         // }, 
+//         // () => {
+//         //     uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
+//         //         console.log('File available at', downloadURL);
+//         //         url_data = downloadURL
+//         //         alert("Image uploaded")
+//         //     });
+//         })
+//     }
+// }
+
+// img_btn.addEventListener('click', uploadImage)
+// img_btn_other.addEventListener('click', uploadImage)
 
 submitButton.addEventListener("click", (e) => {
 
@@ -277,8 +286,9 @@ submitButton.addEventListener("click", (e) => {
     else if (validateFullName(Fname) && Email(Em) && PhoneNumber(Ctn)) {
 
         if (cname == 'MANIT') {
-
-
+ 
+            url_data = File_manit;
+            console.log(url_data);
             if (Em == '' && Fname == '' && Ctn == '' && File_manit == '' && branch == '' && yr == '' && experience_manit == ''&& committee == '') {
                 alert("Please fill all the necessary feilds!")
             }
@@ -317,7 +327,7 @@ submitButton.addEventListener("click", (e) => {
 
 
             else if (url_data == '') {
-                alert(" Click on the upload button and Please upload the valid payment Receipt!")
+                alert("  Please enter valid Google Drive link!")
             }
 
             else if (flag == false) {
@@ -357,7 +367,7 @@ submitButton.addEventListener("click", (e) => {
         }
 
         else if (cname == 'other') {
-
+            url_data = File_other;
             if (Em == '' && Fname == '' && Ctn == '' && File_manit == '' && branch == '' && yr == '' && experience_manit == '' && committee == '' && Oth == '') {
                 alert("Please fill all the necessary feilds!")
             }
@@ -409,7 +419,7 @@ submitButton.addEventListener("click", (e) => {
 
 
             else if (url_data == '') {
-                alert(" Click on the upload button and Please upload the valid payment Receipt!")
+                alert("  Please Enter valid Google Drive link!")
             }
 
             else if (flag == false) {
