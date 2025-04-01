@@ -55,7 +55,7 @@ sections.forEach(section => {
 // change content on resize
 if(window.innerWidth<992) {
   const currEventContent = document.querySelector("#curr-event-content");
-  currEventContent.innerHTML = "MUN'24 IS BACK";
+  currEventContent.innerHTML = "MUN'25 IS BACK";
 }
 
 
